@@ -19,14 +19,14 @@
   nav a.nav-cta:hover { background: var(--amber-light); transform: translateY(-1px); }
   .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 8rem 2rem 6rem; position: relative; overflow: hidden; }
   .ripple-bg { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; pointer-events: none; }
-  .ripple-circle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 50%; border: 1px solid rgba(232, 160, 48, 0.15); animation: ripple-out 6s ease-out infinite; }
+  .ripple-circle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 50%; border: 1.5px solid rgba(232, 160, 48, 0.4); animation: ripple-out 6s ease-out infinite; }
   .ripple-circle:nth-child(1) { width: 200px; height: 200px; animation-delay: 0s; }
   .ripple-circle:nth-child(2) { width: 380px; height: 380px; animation-delay: 1s; }
   .ripple-circle:nth-child(3) { width: 580px; height: 580px; animation-delay: 2s; }
   .ripple-circle:nth-child(4) { width: 800px; height: 800px; animation-delay: 3s; }
   .ripple-circle:nth-child(5) { width: 1050px; height: 1050px; animation-delay: 4s; }
   .ripple-circle:nth-child(6) { width: 1350px; height: 1350px; animation-delay: 5s; }
-  @keyframes ripple-out { 0% { opacity: 0.6; transform: translate(-50%, -50%) scale(0.85); } 100% { opacity: 0; transform: translate(-50%, -50%) scale(1.1); } }
+  @keyframes ripple-out { 0% { opacity: 0.8; transform: translate(-50%, -50%) scale(0.7); } 100% { opacity: 0; transform: translate(-50%, -50%) scale(1.15); } }
   .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(232,160,48,0.12); border: 1px solid rgba(232,160,48,0.3); border-radius: 100px; padding: 0.35rem 1rem; font-size: 0.78rem; font-weight: 500; color: var(--amber-light); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 2rem; animation: fade-up 0.6s ease both; }
   .hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--amber); border-radius: 50%; animation: pulse 2s ease infinite; }
   @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.7); } }
@@ -265,3 +265,4 @@
 </script>
 </body>
 </html>
+
