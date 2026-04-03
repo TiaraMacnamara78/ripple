@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ripple — More Reviews. Less Effort.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --navy: #080e1d; --navy-mid: #0f1a2e; --navy-light: #162035; --amber: #e8a030; --amber-light: #f2bb5a; --teal: #4dbfa0; --cream: #f0ece0; --cream-dim: #a8a49a; --border: rgba(240,236,224,0.1); }
+  html { scroll-behavior: smooth; }
+  body { background: var(--navy); color: var(--cream); font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-height: 1.7; overflow-x: hidden; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 4rem; background: rgba(8,14,29,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; letter-spacing: 0.02em; color: var(--cream); text-decoration: none; }
+  .logo span { color: var(--amber); }
+  nav a.nav-cta { background: var(--amber); color: var(--navy); padding: 0.5rem 1.4rem; border-radius: 100px; text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: background 0.2s, transform 0.15s; }
+  nav a.nav-cta:hover { background: var(--amber-light); transform: translateY(-1px); }
+  .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 8rem 2rem 6rem; position: relative; overflow: hidden; }
+  .ripple-bg { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; pointer-events: none; }
+  .ripple-circle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 50%; border: 1px solid rgba(232, 160, 48, 0.15); animation: ripple-out 6s ease-out infinite; }
+  .ripple-circle:nth-child(1) { width: 200px; height: 200px; animation-delay: 0s; }
+  .ripple-circle:nth-child(2) { width: 380px; height: 380px; animation-delay: 1s; }
+  .ripple-circle:nth-child(3) { width: 580px; height: 580px; animation-delay: 2s; }
+  .ripple-circle:nth-child(4) { width: 800px; height: 800px; animation-delay: 3s; }
+  .ripple-circle:nth-child(5) { width: 1050px; height: 1050px; animation-delay: 4s; }
+  .ripple-circle:nth-child(6) { width: 1350px; height: 1350px; animation-delay: 5s; }
+  @keyframes ripple-out { 0% { opacity: 0.6; transform: translate(-50%, -50%) scale(0.85); } 100% { opacity: 0; transform: translate(-50%, -50%) scale(1.1); } }
+  .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(232,160,48,0.12); border: 1px solid rgba(232,160,48,0.3); border-radius: 100px; padding: 0.35rem 1rem; font-size: 0.78rem; font-weight: 500; color: var(--amber-light); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 2rem; animation: fade-up 0.6s ease both; }
+  .hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--amber); border-radius: 50%; animation: pulse 2s ease infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.7); } }
+  h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 400; line-height: 1.1; letter-spacing: -0.01em; max-width: 800px; margin-bottom: 1.5rem; animation: fade-up 0.6s ease 0.1s both; }
+  h1 em { font-style: italic; color: var(--amber); }
+  .hero-sub { font-size: 1.15rem; color: var(--cream-dim); max-width: 520px; margin-bottom: 3rem; animation: fade-up 0.6s ease 0.2s both; }
+  .hero-cta { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; justify-content: center; animation: fade-up 0.6s ease 0.3s both; }
+  .btn-primary { background: var(--amber); color: var(--navy); padding: 0.85rem 2rem; border-radius: 100px; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: all 0.2s; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; }
+  .btn-primary:hover { background: var(--amber-light); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(232,160,48,0.25); }
+  .btn-ghost { color: var(--cream-dim); text-decoration: none; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.4rem; transition: color 0.2s; }
+  .btn-ghost:hover { color: var(--cream); }
+  .hero-stat { display: flex; gap: 3rem; margin-top: 5rem; animation: fade-up 0.6s ease 0.4s both; }
+  .stat-item { text-align: center; }
+  .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 600; color: var(--amber); display: block; }
+  .stat-label { font-size: 0.8rem; color: var(--cream-dim); text-transform: uppercase; letter-spacing: 0.08em; }
+  @keyframes fade-up { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  section { padding: 7rem 2rem; }
+  .container { max-width: 1100px; margin: 0 auto; }
+  .section-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--amber); font-weight: 500; margin-bottom: 1rem; }
+  .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; line-height: 1.2; margin-bottom: 1.25rem; }
+  .section-sub { font-size: 1rem; color: var(--cream-dim); max-width: 520px; line-height: 1.75; }
+  .how { background: var(--navy-mid); }
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px; margin-top: 4rem; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+  .step { padding: 2.5rem; background: var(--navy-mid); position: relative; transition: background 0.3s; }
+  .step:hover { background: var(--navy-light); }
+  .step-num { font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 600; color: rgba(232,160,48,0.15); line-height: 1; margin-bottom: 1.5rem; }
+  .step-icon { width: 44px; height: 44px; background: rgba(232,160,48,0.1); border: 1px solid rgba(232,160,48,0.25); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; font-size: 1.2rem; }
+  .step h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; margin-bottom: 0.75rem; }
+  .step p { font-size: 0.9rem; color: var(--cream-dim); line-height: 1.7; }
+  .for-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; margin-top: 3.5rem; }
+  .for-card { background: var(--navy-light); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 1rem; text-align: center; transition: all 0.25s; }
+  .for-card:hover { border-color: rgba(232,160,48,0.35); background: rgba(232,160,48,0.05); transform: translateY(-3px); }
+  .for-card .icon { font-size: 1.75rem; margin-bottom: 0.6rem; display: block; }
+  .for-card span { font-size: 0.85rem; color: var(--cream-dim); }
+  .preview-section { background: var(--navy-mid); }
+  .preview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; margin-top: 3rem; }
+  @media (max-width: 768px) { .preview-grid { grid-template-columns: 1fr; gap: 3rem; } nav { padding: 1rem 1.5rem; } .hero-stat { gap: 2rem; } }
+  .phone-mockup { background: #111827; border-radius: 28px; padding: 1.5rem; border: 1px solid rgba(255,255,255,0.08); max-width: 320px; margin: 0 auto; }
+  .phone-top { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .phone-avatar { width: 36px; height: 36px; background: linear-gradient(135deg, var(--teal), var(--amber)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 500; color: white; flex-shrink: 0; }
+  .phone-name { font-size: 0.85rem; font-weight: 500; }
+  .phone-sub { font-size: 0.72rem; color: #6b7280; }
+  .sms-bubble { background: #1d4ed8; border-radius: 16px 16px 4px 16px; padding: 1rem 1.1rem; font-size: 0.82rem; line-height: 1.6; color: white; margin-bottom: 0.5rem; }
+  .sms-time { font-size: 0.68rem; color: #6b7280; text-align: right; }
+  .preview-points { list-style: none; }
+  .preview-points li { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.75rem; }
+  .preview-points .check { width: 22px; height: 22px; background: rgba(77,191,160,0.15); border: 1px solid rgba(77,191,160,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+  .check-icon { width: 10px; height: 10px; color: var(--teal); }
+  .preview-points strong { display: block; font-weight: 500; margin-bottom: 0.2rem; font-size: 0.95rem; }
+  .preview-points span { font-size: 0.85rem; color: var(--cream-dim); }
+  .pricing-card { max-width: 480px; margin: 3.5rem auto 0; background: var(--navy-light); border: 1px solid rgba(232,160,48,0.25); border-radius: 20px; padding: 3rem; text-align: center; position: relative; overflow: hidden; }
+  .pricing-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--amber), var(--teal)); }
+  .pricing-label { display: inline-block; background: rgba(232,160,48,0.12); border: 1px solid rgba(232,160,48,0.3); border-radius: 100px; padding: 0.3rem 1rem; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); margin-bottom: 1.5rem; font-weight: 500; }
+  .price { font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 600; line-height: 1; margin-bottom: 0.25rem; }
+  .price sup { font-size: 1.5rem; vertical-align: top; margin-top: 0.75rem; }
+  .price-note { color: var(--cream-dim); font-size: 0.85rem; margin-bottom: 2rem; }
+  .price-features { list-style: none; text-align: left; margin-bottom: 2.5rem; }
+  .price-features li { display: flex; align-items: center; gap: 0.75rem; padding: 0.6rem 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; color: var(--cream-dim); }
+  .price-features li::before { content: '✦'; color: var(--amber); font-size: 0.6rem; flex-shrink: 0; }
+  .waitlist { background: var(--navy-mid); }
+  .waitlist-inner { max-width: 560px; margin: 0 auto; text-align: center; }
+  .waitlist-form { display: flex; flex-direction: column; gap: 1rem; margin-top: 2.5rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  input, select { width: 100%; background: var(--navy-light); border: 1px solid var(--border); border-radius: 10px; padding: 0.85rem 1.1rem; color: var(--cream); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 300; outline: none; transition: border-color 0.2s; -webkit-appearance: none; }
+  input::placeholder { color: rgba(168,164,154,0.5); }
+  input:focus, select:focus { border-color: rgba(232,160,48,0.5); }
+  select option { background: var(--navy-mid); }
+  .submit-btn { background: var(--amber); color: var(--navy); border: none; border-radius: 10px; padding: 0.95rem; font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 500; cursor: pointer; transition: all 0.2s; letter-spacing: 0.01em; }
+  .submit-btn:hover { background: var(--amber-light); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(232,160,48,0.2); }
+  .form-note { font-size: 0.78rem; color: var(--cream-dim); margin-top: 0.75rem; }
+  footer { border-top: 1px solid var(--border); padding: 2.5rem 4rem; display: flex; align-items: center; justify-content: space-between; font-size: 0.82rem; color: var(--cream-dim); }
+  footer a { color: var(--cream-dim); text-decoration: none; transition: color 0.2s; }
+  footer a:hover { color: var(--amber); }
+  @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.5rem; } }
+  .success-msg { display: none; background: rgba(77,191,160,0.1); border: 1px solid rgba(77,191,160,0.3); border-radius: 10px; padding: 1.25rem; color: var(--teal); font-size: 0.9rem; margin-top: 1rem; }
+</style>
+</head>
+<body>
+<nav>
+  <a href="#" class="logo">Ripple<span>.</span></a>
+  <a href="#waitlist" class="nav-cta">Join waitlist</a>
+</nav>
+<section class="hero">
+  <div class="ripple-bg">
+    <div class="ripple-circle"></div>
+    <div class="ripple-circle"></div>
+    <div class="ripple-circle"></div>
+    <div class="ripple-circle"></div>
+    <div class="ripple-circle"></div>
+    <div class="ripple-circle"></div>
+  </div>
+  <div class="hero-badge">Now accepting early access</div>
+  <h1>One happy customer.<br><em>A hundred more</em> on the way.</h1>
+  <p class="hero-sub">Ripple automatically sends a personalised review request the moment a job is done. No copy-pasting. No awkward asks. Just more 5-star reviews, on autopilot.</p>
+  <div class="hero-cta">
+    <a href="#waitlist" class="btn-primary">Get early access <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="#how" class="btn-ghost">See how it works <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </div>
+  <div class="hero-stat">
+    <div class="stat-item"><span class="stat-num">73%</span><span class="stat-label">of customers leave a review<br>when asked personally</span></div>
+    <div class="stat-item"><span class="stat-num">4×</span><span class="stat-label">more reviews vs<br>asking in person</span></div>
+    <div class="stat-item"><span class="stat-num">2 min</span><span class="stat-label">to set up.<br>Then it's automatic.</span></div>
+  </div>
+</section>
+<section class="how" id="how">
+  <div class="container">
+    <p class="section-label">How it works</p>
+    <h2 class="section-title">Set it up once.<br>Let it run forever.</h2>
+    <p class="section-sub">Ripple plugs into your existing tools and handles the follow-up so you never have to think about it again.</p>
+    <div class="steps">
+      <div class="step"><div class="step-num">01</div><div class="step-icon">🔗</div><h3>Connect your tools</h3><p>Link your invoicing or booking software — Xero, Square, ServiceM8, Mindbody, and more. Takes about two minutes.</p></div>
+      <div class="step"><div class="step-num">02</div><div class="step-icon">✅</div><h3>Job marked complete</h3><p>When a job is done or an invoice is paid, Ripple automatically picks it up. No manual input needed from your team.</p></div>
+      <div class="step"><div class="step-num">03</div><div class="step-icon">💬</div><h3>Review request sent</h3><p>A personalised SMS arrives at the perfect moment. The customer clicks, leaves a review, and your rating grows.</p></div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <p class="section-label">Who it's for</p>
+    <h2 class="section-title">Any business that earns<br>Google Reviews.</h2>
+    <p class="section-sub">If your customers can leave a Google Review, Ripple can help you get more of them.</p>
+    <div class="for-grid">
+      <div class="for-card"><span class="icon">🔧</span><span>Tradies</span></div>
+      <div class="for-card"><span class="icon">🍽️</span><span>Restaurants</span></div>
+      <div class="for-card"><span class="icon">💇</span><span>Salons</span></div>
+      <div class="for-card"><span class="icon">🦷</span><span>Dentists</span></div>
+      <div class="for-card"><span class="icon">🏋️</span><span>Gyms</span></div>
+      <div class="for-card"><span class="icon">🐾</span><span>Vets</span></div>
+      <div class="for-card"><span class="icon">🏨</span><span>Hotels</span></div>
+      <div class="for-card"><span class="icon">🚗</span><span>Auto shops</span></div>
+      <div class="for-card"><span class="icon">👗</span><span>Boutiques</span></div>
+      <div class="for-card"><span class="icon">🧘</span><span>Studios</span></div>
+      <div class="for-card"><span class="icon">🏡</span><span>Real estate</span></div>
+      <div class="for-card"><span class="icon">💊</span><span>Pharmacies</span></div>
+    </div>
+  </div>
+</section>
+<section class="preview-section">
+  <div class="container">
+    <div class="preview-grid">
+      <div>
+        <p class="section-label">The message</p>
+        <h2 class="section-title">Human. Personal.<br>Not a template.</h2>
+        <p class="section-sub" style="margin-bottom: 2.5rem;">Every review request is written by AI, tailored to the specific job. It reads like a message from the business owner — because it should.</p>
+        <ul class="preview-points">
+          <li><div class="check"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#4dbfa0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><strong>Mentions the actual job</strong><span>Not a generic "how was your experience?" — it references what was done.</span></div></li>
+          <li><div class="check"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#4dbfa0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><strong>Uses the customer's name</strong><span>Personalised messages get 3× higher response rates than generic ones.</span></div></li>
+          <li><div class="check"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#4dbfa0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><strong>Direct link to your review page</strong><span>One tap. No searching. Frictionless for the customer.</span></div></li>
+        </ul>
+      </div>
+      <div>
+        <div class="phone-mockup">
+          <div class="phone-top"><div class="phone-avatar">MB</div><div><div class="phone-name">Mick's Electrical</div><div class="phone-sub">Today, 3:42 PM</div></div></div>
+          <div class="sms-bubble">Hi Sarah! Thanks so much for having us out today to sort your switchboard. If you have a moment, we'd really appreciate a quick Google review — it helps us out more than you know. Here's the link: g.page/r/mickselectrical — Mick's Electrical</div>
+          <div class="sms-time">Delivered ✓</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container" style="text-align: center;">
+    <p class="section-label">Pricing</p>
+    <h2 class="section-title">Simple and fair.</h2>
+    <p class="section-sub" style="margin: 0 auto;">Free during our beta. Cancel anytime when we launch paid plans.</p>
+    <div class="pricing-card">
+      <div class="pricing-label">Early access — Beta</div>
+      <div class="price"><sup>$</sup>0</div>
+      <div class="price-note">Free during beta · <strong style="color: var(--amber);">$49/month</strong> when we launch</div>
+      <ul class="price-features">
+        <li>Unlimited review requests</li>
+        <li>AI-personalised messages</li>
+        <li>Connect any invoicing tool</li>
+        <li>Google Review direct links</li>
+        <li>SMS delivery via Twilio</li>
+        <li>Simple dashboard to track results</li>
+      </ul>
+      <a href="#waitlist" class="btn-primary" style="width: 100%; justify-content: center; font-size: 1rem; padding: 1rem;">Claim your free spot</a>
+    </div>
+  </div>
+</section>
+<section class="waitlist" id="waitlist">
+  <div class="container">
+    <div class="waitlist-inner">
+      <p class="section-label">Early access</p>
+      <h2 class="section-title" style="margin-bottom: 0.75rem;">Be first in the water.</h2>
+      <p class="section-sub" style="margin: 0 auto;">Join the waitlist and get free access during our beta. We're onboarding businesses one by one.</p>
+      <form class="waitlist-form" id="waitlist-form">
+        <div class="form-row">
+          <input type="text" placeholder="Your name" required>
+          <input type="text" placeholder="Business name" required>
+        </div>
+        <input type="email" placeholder="Email address" required>
+        <select required>
+          <option value="" disabled selected>What type of business?</option>
+          <option>Tradie / Trade services</option>
+          <option>Restaurant / Café</option>
+          <option>Hair / Beauty salon</option>
+          <option>Dental / Medical</option>
+          <option>Gym / Fitness studio</option>
+          <option>Vet / Pet care</option>
+          <option>Hotel / Accommodation</option>
+          <option>Auto / Mechanics</option>
+          <option>Retail / Boutique</option>
+          <option>Real estate</option>
+          <option>Other</option>
+        </select>
+        <input type="text" placeholder="Google Review page URL (optional)">
+        <button type="submit" class="submit-btn">Join the waitlist →</button>
+        <p class="form-note">No spam. No credit card. Just early access.</p>
+      </form>
+      <div class="success-msg" id="success-msg">✦ You're on the list! We'll be in touch soon with your early access details.</div>
+    </div>
+  </div>
+</section>
+<footer>
+  <a href="#" class="logo" style="font-size: 1.2rem;">Ripple<span style="color: var(--amber);">.</span></a>
+  <span>© 2026 Ripple. All rights reserved.</span>
+  <div style="display: flex; gap: 1.5rem;"><a href="#">Privacy</a><a href="#">Terms</a><a href="mailto:hello@getripple.com">Contact</a></div>
+</footer>
+<script>
+  document.getElementById('waitlist-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    this.style.display = 'none';
+    document.getElementById('success-msg').style.display = 'block';
+  });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.step, .for-card, .pricing-card').forEach(el => {
+    el.style.opacity = '0'; el.style.transform = 'translateY(24px)'; el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
