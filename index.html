@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ripple — More Reviews. Less Effort.</title>
+<title>Ripple â€” More Reviews. Less Effort.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -56,11 +56,13 @@
   .step-icon { width: 44px; height: 44px; background: rgba(232,160,48,0.1); border: 1px solid rgba(232,160,48,0.25); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; font-size: 1.2rem; }
   .step h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; margin-bottom: 0.75rem; }
   .step p { font-size: 0.9rem; color: var(--cream-dim); line-height: 1.7; }
-  .for-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; margin-top: 3.5rem; }
-  .for-card { background: var(--navy-light); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 1rem; text-align: center; transition: all 0.25s; }
-  .for-card:hover { border-color: rgba(232,160,48,0.35); background: rgba(232,160,48,0.05); transform: translateY(-3px); }
-  .for-card .icon { font-size: 1.75rem; margin-bottom: 0.6rem; display: block; }
-  .for-card span { font-size: 0.85rem; color: var(--cream-dim); }
+    .for-statement { margin-top: 3rem; }
+  .for-statement blockquote { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 400; line-height: 1.35; color: var(--cream); max-width: 720px; }
+  .for-statement blockquote em { color: var(--amber); font-style: italic; }
+  .ticker-wrap { margin-top: 3rem; overflow: hidden; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 1rem 0; }
+  .ticker { display: flex; gap: 0; white-space: nowrap; animation: ticker 30s linear infinite; }
+  .ticker-item { font-size: 0.8rem; color: var(--cream-dim); letter-spacing: 0.06em; text-transform: uppercase; padding: 0 2.5rem; border-right: 1px solid var(--border); }
+  @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
   .preview-section { background: var(--navy-mid); }
   .preview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; margin-top: 3rem; }
   @media (max-width: 768px) { .preview-grid { grid-template-columns: 1fr; gap: 3rem; } nav { padding: 1rem 1.5rem; } .hero-stat { gap: 2rem; } }
@@ -85,7 +87,7 @@
   .price-note { color: var(--cream-dim); font-size: 0.85rem; margin-bottom: 2rem; }
   .price-features { list-style: none; text-align: left; margin-bottom: 2.5rem; }
   .price-features li { display: flex; align-items: center; gap: 0.75rem; padding: 0.6rem 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; color: var(--cream-dim); }
-  .price-features li::before { content: '✦'; color: var(--amber); font-size: 0.6rem; flex-shrink: 0; }
+  .price-features li::before { content: 'âœ¦'; color: var(--amber); font-size: 0.6rem; flex-shrink: 0; }
   .waitlist { background: var(--navy-mid); }
   .waitlist-inner { max-width: 560px; margin: 0 auto; text-align: center; }
   .waitlist-form { display: flex; flex-direction: column; gap: 1rem; margin-top: 2.5rem; }
@@ -127,7 +129,7 @@
   </div>
   <div class="hero-stat">
     <div class="stat-item"><span class="stat-num">73%</span><span class="stat-label">of customers leave a review<br>when asked personally</span></div>
-    <div class="stat-item"><span class="stat-num">4×</span><span class="stat-label">more reviews vs<br>asking in person</span></div>
+    <div class="stat-item"><span class="stat-num">4Ã—</span><span class="stat-label">more reviews vs<br>asking in person</span></div>
     <div class="stat-item"><span class="stat-num">2 min</span><span class="stat-label">to set up.<br>Then it's automatic.</span></div>
   </div>
 </section>
@@ -137,9 +139,9 @@
     <h2 class="section-title">Set it up once.<br>Let it run forever.</h2>
     <p class="section-sub">Ripple plugs into your existing tools and handles the follow-up so you never have to think about it again.</p>
     <div class="steps">
-      <div class="step"><div class="step-num">01</div><div class="step-icon">🔗</div><h3>Connect your tools</h3><p>Link your invoicing or booking software — Xero, Square, ServiceM8, Mindbody, and more. Takes about two minutes.</p></div>
-      <div class="step"><div class="step-num">02</div><div class="step-icon">✅</div><h3>Job marked complete</h3><p>When a job is done or an invoice is paid, Ripple automatically picks it up. No manual input needed from your team.</p></div>
-      <div class="step"><div class="step-num">03</div><div class="step-icon">💬</div><h3>Review request sent</h3><p>A personalised SMS arrives at the perfect moment. The customer clicks, leaves a review, and your rating grows.</p></div>
+      <div class="step"><div class="step-num">01</div><div class="step-icon">ðŸ”—</div><h3>Connect your tools</h3><p>Link your invoicing or booking software â€” Xero, Square, ServiceM8, Mindbody, and more. Takes about two minutes.</p></div>
+      <div class="step"><div class="step-num">02</div><div class="step-icon">âœ…</div><h3>Job marked complete</h3><p>When a job is done or an invoice is paid, Ripple automatically picks it up. No manual input needed from your team.</p></div>
+      <div class="step"><div class="step-num">03</div><div class="step-icon">ðŸ’¬</div><h3>Review request sent</h3><p>A personalised SMS arrives at the perfect moment. The customer clicks, leaves a review, and your rating grows.</p></div>
     </div>
   </div>
 </section>
@@ -149,18 +151,18 @@
     <h2 class="section-title">Any business that earns<br>Google Reviews.</h2>
     <p class="section-sub">If your customers can leave a Google Review, Ripple can help you get more of them.</p>
     <div class="for-grid">
-      <div class="for-card"><span class="icon">🔧</span><span>Tradies</span></div>
-      <div class="for-card"><span class="icon">🍽️</span><span>Restaurants</span></div>
-      <div class="for-card"><span class="icon">💇</span><span>Salons</span></div>
-      <div class="for-card"><span class="icon">🦷</span><span>Dentists</span></div>
-      <div class="for-card"><span class="icon">🏋️</span><span>Gyms</span></div>
-      <div class="for-card"><span class="icon">🐾</span><span>Vets</span></div>
-      <div class="for-card"><span class="icon">🏨</span><span>Hotels</span></div>
-      <div class="for-card"><span class="icon">🚗</span><span>Auto shops</span></div>
-      <div class="for-card"><span class="icon">👗</span><span>Boutiques</span></div>
-      <div class="for-card"><span class="icon">🧘</span><span>Studios</span></div>
-      <div class="for-card"><span class="icon">🏡</span><span>Real estate</span></div>
-      <div class="for-card"><span class="icon">💊</span><span>Pharmacies</span></div>
+      <div class="for-card"><span class="icon">ðŸ”§</span><span>Tradies</span></div>
+      <div class="for-card"><span class="icon">ðŸ½ï¸</span><span>Restaurants</span></div>
+      <div class="for-card"><span class="icon">ðŸ’‡</span><span>Salons</span></div>
+      <div class="for-card"><span class="icon">ðŸ¦·</span><span>Dentists</span></div>
+      <div class="for-card"><span class="icon">ðŸ‹ï¸</span><span>Gyms</span></div>
+      <div class="for-card"><span class="icon">ðŸ¾</span><span>Vets</span></div>
+      <div class="for-card"><span class="icon">ðŸ¨</span><span>Hotels</span></div>
+      <div class="for-card"><span class="icon">ðŸš—</span><span>Auto shops</span></div>
+      <div class="for-card"><span class="icon">ðŸ‘—</span><span>Boutiques</span></div>
+      <div class="for-card"><span class="icon">ðŸ§˜</span><span>Studios</span></div>
+      <div class="for-card"><span class="icon">ðŸ¡</span><span>Real estate</span></div>
+      <div class="for-card"><span class="icon">ðŸ’Š</span><span>Pharmacies</span></div>
     </div>
   </div>
 </section>
@@ -170,18 +172,18 @@
       <div>
         <p class="section-label">The message</p>
         <h2 class="section-title">Human. Personal.<br>Not a template.</h2>
-        <p class="section-sub" style="margin-bottom: 2.5rem;">Every review request is written by AI, tailored to the specific job. It reads like a message from the business owner — because it should.</p>
+        <p class="section-sub" style="margin-bottom: 2.5rem;">Every review request is written by AI, tailored to the specific job. It reads like a message from the business owner â€” because it should.</p>
         <ul class="preview-points">
-          <li><div class="check"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#4dbfa0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><strong>Mentions the actual job</strong><span>Not a generic "how was your experience?" — it references what was done.</span></div></li>
-          <li><div class="check"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#4dbfa0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><strong>Uses the customer's name</strong><span>Personalised messages get 3× higher response rates than generic ones.</span></div></li>
+          <li><div class="check"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#4dbfa0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><strong>Mentions the actual job</strong><span>Not a generic "how was your experience?" â€” it references what was done.</span></div></li>
+          <li><div class="check"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#4dbfa0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><strong>Uses the customer's name</strong><span>Personalised messages get 3Ã— higher response rates than generic ones.</span></div></li>
           <li><div class="check"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#4dbfa0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><strong>Direct link to your review page</strong><span>One tap. No searching. Frictionless for the customer.</span></div></li>
         </ul>
       </div>
       <div>
         <div class="phone-mockup">
           <div class="phone-top"><div class="phone-avatar">MB</div><div><div class="phone-name">Mick's Electrical</div><div class="phone-sub">Today, 3:42 PM</div></div></div>
-          <div class="sms-bubble">Hi Sarah! Thanks so much for having us out today to sort your switchboard. If you have a moment, we'd really appreciate a quick Google review — it helps us out more than you know. Here's the link: g.page/r/mickselectrical — Mick's Electrical</div>
-          <div class="sms-time">Delivered ✓</div>
+          <div class="sms-bubble">Hi Sarah! Thanks so much for having us out today to sort your switchboard. If you have a moment, we'd really appreciate a quick Google review â€” it helps us out more than you know. Here's the link: g.page/r/mickselectrical â€” Mick's Electrical</div>
+          <div class="sms-time">Delivered âœ“</div>
         </div>
       </div>
     </div>
@@ -193,9 +195,9 @@
     <h2 class="section-title">Simple and fair.</h2>
     <p class="section-sub" style="margin: 0 auto;">Free during our beta. Cancel anytime when we launch paid plans.</p>
     <div class="pricing-card">
-      <div class="pricing-label">Early access — Beta</div>
+      <div class="pricing-label">Early access â€” Beta</div>
       <div class="price"><sup>$</sup>0</div>
-      <div class="price-note">Free during beta · <strong style="color: var(--amber);">$49/month</strong> when we launch</div>
+      <div class="price-note">Free during beta Â· <strong style="color: var(--amber);">$49/month</strong> when we launch</div>
       <ul class="price-features">
         <li>Unlimited review requests</li>
         <li>AI-personalised messages</li>
@@ -223,7 +225,7 @@
         <select required>
           <option value="" disabled selected>What type of business?</option>
           <option>Tradie / Trade services</option>
-          <option>Restaurant / Café</option>
+          <option>Restaurant / CafÃ©</option>
           <option>Hair / Beauty salon</option>
           <option>Dental / Medical</option>
           <option>Gym / Fitness studio</option>
@@ -235,16 +237,16 @@
           <option>Other</option>
         </select>
         <input type="text" placeholder="Google Review page URL (optional)">
-        <button type="submit" class="submit-btn">Join the waitlist →</button>
+        <button type="submit" class="submit-btn">Join the waitlist â†’</button>
         <p class="form-note">No spam. No credit card. Just early access.</p>
       </form>
-      <div class="success-msg" id="success-msg">✦ You're on the list! We'll be in touch soon with your early access details.</div>
+      <div class="success-msg" id="success-msg">âœ¦ You're on the list! We'll be in touch soon with your early access details.</div>
     </div>
   </div>
 </section>
 <footer>
   <a href="#" class="logo" style="font-size: 1.2rem;">Ripple<span style="color: var(--amber);">.</span></a>
-  <span>© 2026 Ripple. All rights reserved.</span>
+  <span>Â© 2026 Ripple. All rights reserved.</span>
   <div style="display: flex; gap: 1.5rem;"><a href="#">Privacy</a><a href="#">Terms</a><a href="mailto:hello@getripple.com">Contact</a></div>
 </footer>
 <script>
