@@ -17,7 +17,17 @@
 html { scroll-behavior: smooth; }
 body { background: var(--navy); color: var(--cream); font-family: 'Anybody', sans-serif; font-weight: 300; line-height: 1.7; overflow-x: hidden; }
 
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 4rem; background: rgba(8,14,29,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 1rem 3rem; background: rgba(8,14,29,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+.nav-logo-icon { display: flex; align-items: center; justify-content: flex-start; }
+.nav-wordmark { display: flex; align-items: center; justify-content: center; font-family: 'Anybody', sans-serif; font-size: 1.3rem; font-weight: 600; letter-spacing: 0.15em; color: var(--cream); text-decoration: none; }
+.nav-right { display: flex; align-items: center; justify-content: flex-end; }
+.r-icon { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; }
+.r-icon-letter { font-family: 'Anybody', sans-serif; font-size: 1.6rem; font-weight: 800; font-style: italic; color: rgba(232,160,48,0.35); line-height: 1; position: relative; z-index: 1; }
+.r-ring { position: absolute; top: 50%; left: 50%; border-radius: 50%; border: 2px solid var(--amber); transform: translate(-50%, -50%) scale(0.2); opacity: 0; animation: r-pulse 2.5s ease-out infinite; }
+.r-ring:nth-child(1) { width: 36px; height: 36px; animation-delay: 0s; border-width: 2px; }
+.r-ring:nth-child(2) { width: 36px; height: 36px; animation-delay: 0.9s; border-width: 1.5px; }
+.r-ring:nth-child(3) { width: 36px; height: 36px; animation-delay: 1.8s; border-width: 1px; }
+@keyframes r-pulse { 0% { transform: translate(-50%,-50%) scale(0.3); opacity: 0.8; } 100% { transform: translate(-50%,-50%) scale(2.4); opacity: 0; } }
 .logo { font-family: 'Anybody', sans-serif; font-size: 1.5rem; font-weight: 600; letter-spacing: 0.02em; color: var(--cream); text-decoration: none; }
 .logo span { color: var(--amber); }
   .logo-r { color: var(--amber); font-style: italic; font-weight: 800; font-size: 1.9rem; line-height: 1; display: inline-block; transform: translateY(1px); }
@@ -360,6 +370,7 @@ document.querySelectorAll('.step, .pricing-card').forEach(el => {
 </script>
 </body>
 </html>
+
 
 
 
