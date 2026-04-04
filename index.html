@@ -20,6 +20,7 @@ body { background: var(--navy); color: var(--cream); font-family: 'Anybody', san
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 4rem; background: rgba(8,14,29,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
 .logo { font-family: 'Anybody', sans-serif; font-size: 1.5rem; font-weight: 600; letter-spacing: 0.02em; color: var(--cream); text-decoration: none; }
 .logo span { color: var(--amber); }
+  .logo-r { color: var(--amber); font-style: italic; font-weight: 800; font-size: 1.9rem; line-height: 1; display: inline-block; transform: translateY(1px); }
 nav a.nav-cta { background: var(--amber); color: var(--navy); padding: 0.5rem 1.4rem; border-radius: 100px; text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: background 0.2s, transform 0.15s; }
 nav a.nav-cta:hover { background: var(--amber-light); transform: translateY(-1px); }
 
@@ -125,7 +126,7 @@ footer a:hover { color: var(--amber); }
 <body>
 
 <nav>
-  <a href="#" class="logo">Ripple<span>.</span></a>
+  <a href="#" class="logo"><span class="logo-r">R</span>ipple<span>.</span></a>
   <a href="#waitlist" class="nav-cta">Join waitlist</a>
 </nav>
 
@@ -335,6 +336,7 @@ document.querySelectorAll('.step, .pricing-card').forEach(el => {
 </script>
 </body>
 </html>
+
 
 
 
