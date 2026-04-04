@@ -121,6 +121,12 @@ footer { border-top: 1px solid var(--border); padding: 2.5rem 4rem; display: fle
 footer a { color: var(--cream-dim); text-decoration: none; transition: color 0.2s; }
 footer a:hover { color: var(--amber); }
 @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.5rem; } }
+  .logo-svg { height: 28px; overflow: visible; display: block; }
+  .logo-ring { fill: none; stroke: #e8a030; transform-origin: 8px 14px; animation: logo-ring-out 2.5s ease-out infinite; }
+  .logo-ring:nth-child(1) { stroke-width: 2.5; animation-delay: 0s; }
+  .logo-ring:nth-child(2) { stroke-width: 1.8; animation-delay: 0.6s; }
+  .logo-ring:nth-child(3) { stroke-width: 1.2; animation-delay: 1.2s; }
+  @keyframes logo-ring-out { 0% { opacity: 0.9; transform: scale(0.2); } 100% { opacity: 0; transform: scale(1); } }
 </style>
 </head>
 <body>
@@ -336,6 +342,7 @@ document.querySelectorAll('.step, .pricing-card').forEach(el => {
 </script>
 </body>
 </html>
+
 
 
 
