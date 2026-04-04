@@ -132,7 +132,14 @@ footer a:hover { color: var(--amber); }
 <body>
 
 <nav>
-  <a href="#" class="logo"><span class="logo-r">R</span>ipple<span>.</span></a>
+  <a href="#" class="logo" style="text-decoration:none; position:relative; display:inline-flex; align-items:center;">
+    <span style="position:relative; display:inline-block;">
+      <svg style="position:absolute; top:50%; left:3px; transform:translateY(-50%); overflow:visible; pointer-events:none; width:0; height:0;" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="0" cy="0" r="14" fill="none" stroke="#e8a030" stroke-width="2.5" style="animation: logo-ring-out 2.5s ease-out infinite; transform-origin: 0 0;"/>
+        <circle cx="0" cy="0" r="14" fill="none" stroke="#e8a030" stroke-width="1.8" style="animation: logo-ring-out 2.5s ease-out 0.7s infinite; transform-origin: 0 0;"/>
+        <circle cx="0" cy="0" r="14" fill="none" stroke="#e8a030" stroke-width="1.2" style="animation: logo-ring-out 2.5s ease-out 1.4s infinite; transform-origin: 0 0;"/>
+      </svg>RIPPLE</span>
+  </a>
   <a href="#waitlist" class="nav-cta">Join waitlist</a>
 </nav>
 
@@ -321,7 +328,14 @@ footer a:hover { color: var(--amber); }
 </section>
 
 <footer>
-  <a href="#" class="logo" style="font-size:1.2rem;">Ripple<span style="color:var(--amber);">.</span></a>
+  <a href="#" class="logo" style="text-decoration:none; position:relative; display:inline-flex; align-items:center;">
+    <span style="position:relative; display:inline-block;">
+      <svg style="position:absolute; top:50%; left:3px; transform:translateY(-50%); overflow:visible; pointer-events:none; width:0; height:0;" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="0" cy="0" r="14" fill="none" stroke="#e8a030" stroke-width="2.5" style="animation: logo-ring-out 2.5s ease-out infinite; transform-origin: 0 0;"/>
+        <circle cx="0" cy="0" r="14" fill="none" stroke="#e8a030" stroke-width="1.8" style="animation: logo-ring-out 2.5s ease-out 0.7s infinite; transform-origin: 0 0;"/>
+        <circle cx="0" cy="0" r="14" fill="none" stroke="#e8a030" stroke-width="1.2" style="animation: logo-ring-out 2.5s ease-out 1.4s infinite; transform-origin: 0 0;"/>
+      </svg>RIPPLE</span>
+  </a>
   <span>&copy; 2026 Ripple. All rights reserved.</span>
   <div style="display:flex;gap:1.5rem;"><a href="#">Privacy</a><a href="#">Terms</a><a href="mailto:hello@getripple.com">Contact</a></div>
 </footer>
@@ -342,6 +356,7 @@ document.querySelectorAll('.step, .pricing-card').forEach(el => {
 </script>
 </body>
 </html>
+
 
 
 
