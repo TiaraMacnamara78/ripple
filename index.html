@@ -127,6 +127,10 @@ footer a:hover { color: var(--amber); }
   .logo-ring:nth-child(2) { stroke-width: 1.8; animation-delay: 0.6s; }
   .logo-ring:nth-child(3) { stroke-width: 1.2; animation-delay: 1.2s; }
   @keyframes logo-ring-out { 0% { opacity: 0.9; transform: scale(0.2); } 100% { opacity: 0; transform: scale(1); } }
+  .logo-r { position: relative; display: inline-block; }
+  .logo-r::before, .logo-r::after { content: ""; position: absolute; top: 50%; left: 50%; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; border: 2px solid var(--amber); animation: r-ripple 2.4s ease-out infinite; pointer-events: none; }
+  .logo-r::after { animation-delay: 1.2s; border-width: 1.5px; }
+  @keyframes r-ripple { 0% { transform: scale(0.3); opacity: 0.85; } 100% { transform: scale(2.8); opacity: 0; } }
 </style>
 </head>
 <body>
@@ -356,6 +360,7 @@ document.querySelectorAll('.step, .pricing-card').forEach(el => {
 </script>
 </body>
 </html>
+
 
 
 
