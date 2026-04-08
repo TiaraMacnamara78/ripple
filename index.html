@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿[7:14 am, 09/04/2026] Anna: html
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -14,32 +15,8 @@
   --amber: #e8a030; --amber-light: #f2bb5a; --teal: #4dbfa0;
   --cream: #f0ece0; --cream-dim: #a8a49a; --border: rgba(240,236,224,0.1);
 }
-html { scroll-behavior: smooth; }
-body { background: var(--navy); color: var(--cream); font-family: 'Anybody', sans-serif; font-weight: 300; line-height: 1.7; overflow-x: hidden; }
-
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 1rem 3rem; background: rgba(8,14,29,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
-.nav-logo-icon { display: flex; align-items: center; justify-content: flex-start; }
-.nav-wordmark { display: flex; align-items: center; justify-content: center; font-family: 'Anybody', sans-serif; font-size: 1.3rem; font-weight: 600; font-style: italic; letter-spacing: 0.15em; color: var(--cream); text-decoration: none; }
-.nav-right { display: flex; align-items: center; justify-content: flex-end; }
-.r-icon { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; }
-.r-icon-letter { font-family: 'Anybody', sans-serif; font-size: 1.6rem; font-weight: 800; font-style: italic; color: rgba(232,160,48,0.35); line-height: 1; position: relative; z-index: 1; }
-.r-ring { position: absolute; top: 50%; left: 50%; border-radius: 50%; border: 2px solid var(--amber); transform: translate(-50%, -50%) scale(0.2); opacity: 0; animation: r-pulse 2.5s ease-out infinite; }
-.r-ring:nth-child(1) { width: 36px; height: 36px; animation-delay: 0s; border-width: 2px; }
-.r-ring:nth-child(2) { width: 36px; height: 36px; animation-delay: 0.9s; border-width: 1.5px; }
-.r-ring:nth-child(3) { width: 36px; height: 36px; animation-delay: 1.8s; border-width: 1px; }
-@keyframes r-pulse { 0% { transform: translate(-50%,-50%) scale(0.3); opacity: 0.8; } 100% { transform: translate(-50%,-50%) scale(2.4); opacity: 0; } }
-.logo { font-family: 'Anybody', sans-serif; font-size: 1.5rem; font-weight: 600; letter-spacing: 0.02em; color: var(--cream); text-decoration: none; }
-.logo span { color: var(--amber); }
-  .logo-r { color: var(--amber); font-style: italic; font-weight: 800; font-size: 1.9rem; line-height: 1; display: inline-block; transform: translateY(1px); }
-nav a.nav-cta { background: var(--amber); color: var(--navy); padding: 0.5rem 1.4rem; border-radius: 100px; text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: background 0.2s, transform 0.15s; }
-nav a.nav-cta:hover { background: var(--amber-light); transform: translateY(-1px); }
-
-.hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 8rem 2rem 6rem; position: relative; overflow: hidden; }
-.ripple-bg { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; pointer-events: none; z-index: 0; }
-.ripple-circle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 50%; border: 1.5px solid rgba(232,160,48,0.4); animation: ripple-out 5s ease-out infinite; }
-.ripple-circle:nth-child(1) { width: 160px; height: 160px; animation-delay: 0s; }
-.ripple-circle:nth-child(2) { width: 320px; height: 320px; animation-delay: 0.8s; }
-.ripple-circle:nth-child(3) { width: 520px; height: 520px; animation-delay: 1.6s; }
+html { scroll-behavior: smo…
+[7:14 am, 09/04/2026] Anna: html
 .ripple-circle:nth-child(4) { width: 760px; height: 760px; animation-delay: 2.4s; }
 .ripple-circle:nth-child(5) { width: 1050px; height: 1050px; animation-delay: 3.2s; }
 .ripple-circle:nth-child(6) { width: 1400px; height: 1400px; animation-delay: 4s; }
@@ -48,34 +25,8 @@ nav a.nav-cta:hover { background: var(--amber-light); transform: translateY(-1px
   100% { opacity: 0; transform: translate(-50%, -50%) scale(1.2); }
 }
 .hero-content { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; }
-.hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(232,160,48,0.12); border: 1px solid rgba(232,160,48,0.3); border-radius: 100px; padding: 0.35rem 1rem; font-size: 0.78rem; font-weight: 500; color: var(--amber-light); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 2rem; animation: fade-up 0.6s ease both; }
-.hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--amber); border-radius: 50%; animation: pulse 2s ease infinite; display: inline-block; }
-@keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.7); } }
-h1 { font-family: 'Anybody', sans-serif; font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 400; line-height: 1.1; letter-spacing: -0.01em; max-width: 800px; margin-bottom: 1.5rem; animation: fade-up 0.6s ease 0.1s both; }
-h1 em { font-style: italic; color: var(--amber); }
-.hero-sub { font-size: 1.15rem; color: var(--cream-dim); max-width: 520px; margin-bottom: 3rem; animation: fade-up 0.6s ease 0.2s both; }
-.hero-cta { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; justify-content: center; animation: fade-up 0.6s ease 0.3s both; }
-.btn-primary { background: var(--amber); color: var(--navy); padding: 0.85rem 2rem; border-radius: 100px; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: all 0.2s; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; }
-.btn-primary:hover { background: var(--amber-light); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(232,160,48,0.25); }
-.btn-ghost { color: var(--cream-dim); text-decoration: none; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.4rem; transition: color 0.2s; }
-.btn-ghost:hover { color: var(--cream); }
-.hero-stat { display: flex; gap: 3rem; margin-top: 5rem; animation: fade-up 0.6s ease 0.4s both; }
-.stat-item { text-align: center; }
-.stat-num { font-family: 'Anybody', sans-serif; font-size: 2.2rem; font-weight: 600; color: var(--amber); display: block; }
-.stat-label { font-size: 0.8rem; color: var(--cream-dim); text-transform: uppercase; letter-spacing: 0.08em; }
-@keyframes fade-up { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-
-section { padding: 7rem 2rem; }
-.container { max-width: 1100px; margin: 0 auto; }
-.section-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--amber); font-weight: 500; margin-bottom: 1rem; }
-.section-title { font-family: 'Anybody', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; line-height: 1.2; margin-bottom: 1.25rem; }
-.section-sub { font-size: 1rem; color: var(--cream-dim); max-width: 520px; line-height: 1.75; }
-
-.how { background: var(--navy-mid); }
-.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px; margin-top: 4rem; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
-.step { padding: 2.5rem; background: var(--navy-mid); position: relative; transition: background 0.3s; }
-.step:hover { background: var(--navy-light); }
-.step-num { font-family: 'Anybody', sans-serif; font-size: 4rem; font-weight: 600; color: rgba(232,160,48,0.15); line-height: 1; margin-bottom: 1.5rem; }
+.hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(232,160,48,0.12); border: 1px solid rgba(232,160,48,0.3); border-radius: 100px; padding: 0.35rem 1rem; font-size: 0.78rem; font-weight: 500; color: va…
+[7:14 am, 09/04/2026] Anna: html
 .step-icon { width: 44px; height: 44px; background: rgba(232,160,48,0.1); border: 1px solid rgba(232,160,48,0.25); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; font-size: 1.2rem; }
 .step h3 { font-family: 'Anybody', sans-serif; font-size: 1.4rem; font-weight: 600; margin-bottom: 0.75rem; }
 .step p { font-size: 0.9rem; color: var(--cream-dim); line-height: 1.7; }
@@ -83,33 +34,8 @@ section { padding: 7rem 2rem; }
 .for-statement { margin-top: 3rem; }
 .for-statement blockquote { font-family: 'Anybody', sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 400; line-height: 1.35; color: var(--cream); max-width: 720px; }
 .for-statement blockquote em { color: var(--amber); font-style: italic; }
-.ticker-wrap { margin-top: 3rem; overflow: hidden; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 1rem 0; }
-.ticker { display: flex; gap: 0; white-space: nowrap; animation: ticker 35s linear infinite; }
-.ticker-item { font-size: 0.8rem; color: var(--cream-dim); letter-spacing: 0.08em; text-transform: uppercase; padding: 0 2.5rem; border-right: 1px solid var(--border); flex-shrink: 0; }
-@keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-
-.preview-section { background: var(--navy-mid); }
-.preview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; margin-top: 3rem; }
-@media (max-width: 768px) { .preview-grid { grid-template-columns: 1fr; gap: 3rem; } nav { padding: 1rem 1.5rem; } .hero-stat { gap: 2rem; } }
-.phone-mockup { background: #111827; border-radius: 28px; padding: 1.5rem; border: 1px solid rgba(255,255,255,0.08); max-width: 320px; margin: 0 auto; }
-.phone-top { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
-.phone-avatar { width: 36px; height: 36px; background: linear-gradient(135deg, #4dbfa0, #e8a030); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 500; color: white; flex-shrink: 0; }
-.phone-name { font-size: 0.85rem; font-weight: 500; }
-.phone-sub { font-size: 0.72rem; color: #6b7280; }
-.sms-bubble { background: #1d4ed8; border-radius: 16px 16px 4px 16px; padding: 1rem 1.1rem; font-size: 0.82rem; line-height: 1.6; color: white; margin-bottom: 0.5rem; }
-.sms-time { font-size: 0.68rem; color: #6b7280; text-align: right; }
-.preview-points { list-style: none; }
-.preview-points li { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.75rem; }
-.preview-points .check { width: 22px; height: 22px; background: rgba(77,191,160,0.15); border: 1px solid rgba(77,191,160,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
-.preview-points strong { display: block; font-weight: 500; margin-bottom: 0.2rem; font-size: 0.95rem; }
-.preview-points span { font-size: 0.85rem; color: var(--cream-dim); }
-
-.pricing-card { max-width: 480px; margin: 3.5rem auto 0; background: var(--navy-light); border: 1px solid rgba(232,160,48,0.25); border-radius: 20px; padding: 3rem; text-align: center; position: relative; overflow: hidden; }
-.pricing-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, #e8a030, #4dbfa0); }
-.pricing-label { display: inline-block; background: rgba(232,160,48,0.12); border: 1px solid rgba(232,160,48,0.3); border-radius: 100px; padding: 0.3rem 1rem; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); margin-bottom: 1.5rem; font-weight: 500; }
-.price { font-family: 'Anybody', sans-serif; font-size: 4rem; font-weight: 600; line-height: 1; margin-bottom: 0.25rem; }
-.price sup { font-size: 1.5rem; vertical-align: top; margin-top: 0.75rem; }
-.price-note { color: var(--cream-dim); font-size: 0.85rem; margin-bottom: 2rem; }
+.ticker-wrap { margin-top: 3rem; overflow:…
+[7:14 am, 09/04/2026] Anna: html
 .price-features { list-style: none; text-align: left; margin-bottom: 2.5rem; }
 .price-features li { display: flex; align-items: center; gap: 0.75rem; padding: 0.6rem 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; color: var(--cream-dim); }
 .price-features li::before { content: '\2736'; color: var(--amber); font-size: 0.6rem; flex-shrink: 0; }
@@ -118,54 +44,9 @@ section { padding: 7rem 2rem; }
 .waitlist-inner { max-width: 560px; margin: 0 auto; text-align: center; }
 .waitlist-form { display: flex; flex-direction: column; gap: 1rem; margin-top: 2.5rem; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-input, select { width: 100%; background: var(--navy-light); border: 1px solid var(--border); border-radius: 10px; padding: 0.85rem 1.1rem; color: var(--cream); font-family: 'Anybody', sans-serif; font-size: 0.9rem; font-weight: 300; outline: none; transition: border-color 0.2s; -webkit-appearance: none; }
-input::placeholder { color: rgba(168,164,154,0.5); }
-input:focus, select:focus { border-color: rgba(232,160,48,0.5); }
-select option { background: var(--navy-mid); }
-.submit-btn { background: var(--amber); color: var(--navy); border: none; border-radius: 10px; padding: 0.95rem; font-family: 'Anybody', sans-serif; font-size: 1rem; font-weight: 500; cursor: pointer; transition: all 0.2s; }
-.submit-btn:hover { background: var(--amber-light); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(232,160,48,0.2); }
-.form-note { font-size: 0.78rem; color: var(--cream-dim); margin-top: 0.75rem; }
-.success-msg { display: none; background: rgba(77,191,160,0.1); border: 1px solid rgba(77,191,160,0.3); border-radius: 10px; padding: 1.25rem; color: var(--teal); font-size: 0.9rem; margin-top: 1rem; }
-
-footer { border-top: 1px solid var(--border); padding: 2.5rem 4rem; display: flex; align-items: center; justify-content: space-between; font-size: 0.82rem; color: var(--cream-dim); }
-footer a { color: var(--cream-dim); text-decoration: none; transition: color 0.2s; }
-footer a:hover { color: var(--amber); }
-@media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.5rem; } }
-  .logo-svg { height: 28px; overflow: visible; display: block; }
-  .logo-ring { fill: none; stroke: #e8a030; transform-origin: 8px 14px; animation: logo-ring-out 2.5s ease-out infinite; }
-  .logo-ring:nth-child(1) { stroke-width: 2.5; animation-delay: 0s; }
-  .logo-ring:nth-child(2) { stroke-width: 1.8; animation-delay: 0.6s; }
-  .logo-ring:nth-child(3) { stroke-width: 1.2; animation-delay: 1.2s; }
-  @keyframes logo-ring-out { 0% { opacity: 0.9; transform: scale(0.2); } 100% { opacity: 0; transform: scale(1); } }
-  .logo-r { position: relative; display: inline-block; }
-  .logo-r::before, .logo-r::after { content: ""; position: absolute; top: 50%; left: 50%; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%; border: 2px solid var(--amber); animation: r-ripple 2.4s ease-out infinite; pointer-events: none; }
-  .logo-r::after { animation-delay: 1.2s; border-width: 1.5px; }
-  @keyframes r-ripple { 0% { transform: scale(0.3); opacity: 0.85; } 100% { transform: scale(2.8); opacity: 0; } }
-</style>
-</head>
-<body>
-
-<nav>
-  <div class="nav-logo-icon">
-    <div class="r-icon">
-      <div class="r-ring"></div>
-      <div class="r-ring"></div>
-      <div class="r-ring"></div>
-      <span class="r-icon-letter">R</span>
-    </div>
-  </div>
-  <a href="#" class="nav-wordmark">RIPPLE</a>
-  <div class="nav-right">
-    <a href="#waitlist" class="nav-cta">Join waitlist</a>
-  </div>
-</nav>
-
-<section class="hero">
-  <div class="ripple-bg">
-    <div class="ripple-circle"></div>
-    <div class="ripple-circle"></div>
-    <div class="ripple-circle"></div>
-    <div class="ripple-circle"></div>
+input, select { width: 100%; background: var(--navy-light); border: 1px solid var(--border); border-radius: 10px; padding: 0…
+[7:14 am, 09/04/2026] Anna: html
+   <div class="ripple-circle"></div>
     <div class="ripple-circle"></div>
     <div class="ripple-circle"></div>
   </div>
@@ -178,42 +59,9 @@ footer a:hover { color: var(--amber); }
       <a href="#how" class="btn-ghost">See how it works &darr;</a>
     </div>
     <div class="hero-stat">
-      <div class="stat-item"><span class="stat-num">73%</span><span class="stat-label">of customers leave a review<br>when asked personally</span></div>
-      <div class="stat-item"><span class="stat-num">4&times;</span><span class="stat-label">more reviews vs<br>asking in person</span></div>
-      <div class="stat-item"><span class="stat-num">2 min</span><span class="stat-label">to set up.<br>Then it&rsquo;s automatic.</span></div>
-    </div>
-  </div>
-</section>
-
-<section style="background: var(--navy-mid);">
-  <div class="container">
-    <p class="section-label">Sound familiar?</p>
-    <h2 class="section-title">Chasing reviews is<br><em>awkward, slow, and forgotten.</em></h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 3.5rem;">
-      <div style="padding: 2rem; background: var(--navy); border: 1px solid var(--border); border-radius: 14px;">
-        <div style="font-size: 1.5rem; margin-bottom: 1rem;">😬</div>
-        <h3 style="font-family: ''Cormorant Garamond'', serif; font-size: 1.2rem; font-weight: 600; margin-bottom: 0.6rem;">It feels awkward to ask</h3>
-        <p style="font-size: 0.9rem; color: var(--cream-dim); line-height: 1.7;">You just finished a great job. The last thing you want to do is stand there and ask for a favour. So you don't. And the moment passes.</p>
-      </div>
-      <div style="padding: 2rem; background: var(--navy); border: 1px solid var(--border); border-radius: 14px;">
-        <div style="font-size: 1.5rem; margin-bottom: 1rem;">📋</div>
-        <h3 style="font-family: ''Cormorant Garamond'', serif; font-size: 1.2rem; font-weight: 600; margin-bottom: 0.6rem;">It always slips through the cracks</h3>
-        <p style="font-size: 0.9rem; color: var(--cream-dim); line-height: 1.7;">You mean to follow up. You really do. But there's another job, another invoice, another problem. Following up on reviews? It never makes the list.</p>
-      </div>
-      <div style="padding: 2rem; background: var(--navy); border: 1px solid var(--border); border-radius: 14px;">
-        <div style="font-size: 1.5rem; margin-bottom: 1rem;">⭐</div>
-        <h3 style="font-family: ''Cormorant Garamond'', serif; font-size: 1.2rem; font-weight: 600; margin-bottom: 0.6rem;">Your competitors are pulling ahead</h3>
-        <p style="font-size: 0.9rem; color: var(--cream-dim); line-height: 1.7;">Customers search Google before they pick up the phone. More reviews means higher rankings, more trust, more calls. Every missed review is a customer you didn't get.</p>
-      </div>
-    </div>
-    <div style="margin-top: 3.5rem; padding: 2.5rem; background: rgba(232,160,48,0.06); border: 1px solid rgba(232,160,48,0.2); border-radius: 14px; text-align: center;">
-      <p style="font-family: ''Cormorant Garamond'', serif; font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 400; line-height: 1.4; max-width: 680px; margin: 0 auto;">Ripple handles the follow-up <em style="color: var(--amber);">automatically</em> — so you get the reviews without the awkwardness, the effort, or the forgotten to-do list.</p>
-    </div>
-  </div>
-</section><section class="how" id="how">
-  <div class="container">
-    <p class="section-label">How it works</p>
-    <h2 class="section-title">Set it up once.<br>Let it run forever.</h2>
+      <div class="stat-item"><span class="stat-num">73%</span><span class="stat-label">…
+[7:14 am, 09/04/2026] Anna: html
+   <h2 class="section-title">Set it up once.<br>Let it run forever.</h2>
     <p class="section-sub">Ripple plugs into your existing tools and handles the follow-up so you never have to think about it again.</p>
     <div class="steps">
       <div class="step">
@@ -226,163 +74,4 @@ footer a:hover { color: var(--amber); }
         <div class="step-num">02</div>
         <div class="step-icon">&#10003;</div>
         <h3>Job marked complete</h3>
-        <p>When a job is done or an invoice is paid, Ripple automatically picks it up. No manual input needed from your team.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <div class="step-icon">&#128172;</div>
-        <h3>Review request sent</h3>
-        <p>A personalised SMS arrives at the perfect moment. The customer clicks, leaves a review, and your rating grows.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <p class="section-label">Who it&rsquo;s for</p>
-    <h2 class="section-title">Any business that earns<br>Google Reviews.</h2>
-    <div class="for-statement">
-      <blockquote>If your customers can leave a Google Review,<br><em>Ripple works for you.</em></blockquote>
-    </div>
-    <p style="margin-top: 2rem; font-size: 0.95rem; color: var(--cream-dim); line-height: 1.8;">
-      Tradies, restaurants, salons, dentists, gyms, vets, hotels, auto businesses, retail businesses, studios, real estate agents, pharmacies, cafes, physios, florists, photographers — and anyone else whose customers can leave a Google Review.
-    </p>
-  </div>
-</section>
-
-<section class="preview-section">
-  <div class="container">
-    <div class="preview-grid">
-      <div>
-        <p class="section-label">The message</p>
-        <h2 class="section-title">Human. Personal.<br>Not a template.</h2>
-        <p class="section-sub" style="margin-bottom:2.5rem;">Every review request is written by AI, tailored to the specific job. It reads like a message from the business owner &mdash; because it should.</p>
-        <ul class="preview-points">
-          <li>
-            <div class="check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#4dbfa0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div><strong>Mentions the actual job</strong><span>Not a generic &ldquo;how was your experience?&rdquo; &mdash; it references what was done.</span></div>
-          </li>
-          <li>
-            <div class="check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#4dbfa0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div><strong>Uses the customer&rsquo;s name</strong><span>Personalised messages get 3&times; higher response rates than generic ones.</span></div>
-          </li>
-          <li>
-            <div class="check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#4dbfa0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div><strong>Direct link to your review page</strong><span>One tap. No searching. Frictionless for the customer.</span></div>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <div class="phone-mockup">
-          <div class="phone-top">
-            <div class="phone-avatar">MB</div>
-            <div><div class="phone-name">Mick&rsquo;s Electrical</div><div class="phone-sub">Today, 3:42 PM</div></div>
-          </div>
-          <div class="sms-bubble">Hi Sarah! Thanks so much for having us out today to sort your switchboard. If you have a moment, we&rsquo;d really appreciate a quick Google review &mdash; it helps us out more than you know. Here&rsquo;s the link: g.page/r/mickselectrical &mdash; Mick&rsquo;s Electrical</div>
-          <div class="sms-time">Delivered &#10003;</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container" style="text-align:center;">
-    <p class="section-label">Pricing</p>
-    <h2 class="section-title">Simple and fair.</h2>
-    <p class="section-sub" style="margin:0 auto;">Free during our beta. Cancel anytime when we launch paid plans.</p>
-    <div class="pricing-card">
-      <div class="pricing-label">Early access &mdash; Beta</div>
-      <div class="price"><sup>$</sup>0</div>
-      <div class="price-note">Free during beta &middot; <strong style="color:var(--amber);">$49/month</strong> when we launch</div>
-      <ul class="price-features">
-        <li>Unlimited review requests</li>
-        <li>AI-personalised messages</li>
-        <li>Connect any invoicing tool</li>
-        <li>Google Review direct links</li>
-        <li>SMS delivery via Twilio</li>
-        <li>Simple dashboard to track results</li>
-      </ul>
-      <a href="#waitlist" class="btn-primary" style="width:100%;justify-content:center;font-size:1rem;padding:1rem;">Claim your free spot</a>
-    </div>
-  </div>
-</section>
-
-<section class="waitlist" id="waitlist">
-  <div class="container">
-    <div class="waitlist-inner">
-      <p class="section-label">Early access</p>
-      <h2 class="section-title" style="margin-bottom:0.75rem;">Be first in the water.</h2>
-      <p class="section-sub" style="margin:0 auto;">Join the waitlist and get free access during our beta. We&rsquo;re onboarding businesses one by one.</p>
-      <form class="waitlist-form" id="waitlist-form">
-        <div class="form-row">
-          <input type="text" placeholder="Your name" required>
-          <input type="text" placeholder="Business name" required>
-        </div>
-        <input type="email" placeholder="Email address" required>
-        <select required>
-          <option value="" disabled selected>What type of business?</option>
-          <option>Tradie / Trade services</option>
-          <option>Restaurant / Cafe</option>
-          <option>Hair / Beauty salon</option>
-          <option>Dental / Medical</option>
-          <option>Gym / Fitness studio</option>
-          <option>Vet / Pet care</option>
-          <option>Hotel / Accommodation</option>
-          <option>Auto / auto businesses</option>
-          <option>Retail / Boutique</option>
-          <option>Real estate</option>
-          <option>Other</option>
-        </select>
-        <input type="text" placeholder="Google Review page URL (optional)">
-        <button type="submit" class="submit-btn">Join the waitlist &rarr;</button>
-        <p class="form-note">No spam. No credit card. Just early access.</p>
-      </form>
-      <div class="success-msg" id="success-msg">You&rsquo;re on the list! We&rsquo;ll be in touch soon with your early access details.</div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <span style="font-family:'Anybody',sans-serif; font-weight:600; font-style:italic; letter-spacing:0.1em; color:var(--cream-dim);">RIPPLE</span>
-
-  <span>&copy; 2026 Ripple. All rights reserved.</span>
-  <div style="display:flex;gap:1.5rem;"><a href="#">Privacy</a><a href="#">Terms</a><a href="mailto:hello@getripple.com">Contact</a></div>
-</footer>
-
-<script>
-document.getElementById('waitlist-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  this.style.display = 'none';
-  document.getElementById('success-msg').style.display = 'block';
-});
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
-}, { threshold: 0.1 });
-document.querySelectorAll('.step, .pricing-card').forEach(el => {
-  el.style.opacity='0'; el.style.transform='translateY(24px)'; el.style.transition='opacity 0.5s ease, transform 0.5s ease';
-  observer.observe(el);
-});
-</script>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <p>When a job is done or an invoice is paid, Ripple automatically picks it up. N…
