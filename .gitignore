@@ -1,1 +1,6 @@
 ripple/
+logo_b64.txt
+build_site.py
+embed_hero.py
+write_hero.py
+push.bat
