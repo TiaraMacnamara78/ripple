@@ -33,20 +33,20 @@ nav { position: static; left: 0; right: 0; z-index: 100; display: flex; flex-dir
 .hero-left { display: flex; flex-direction: column; justify-content: center; padding: 6rem 4rem 6rem 6rem; }
 .hero-right { position: relative; overflow: hidden; }
 .hero-photo { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
-.hero-label { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 2rem; }
-h1 { font-family: 'Anybody', sans-serif; font-size: clamp(2.8rem, 5vw, 5.5rem); font-weight: 900; font-style: italic; line-height: 0.95; letter-spacing: -0.02em; margin-bottom: 2rem; }
+.hero-label { font-size: 0.7rem; font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--ink-light); margin-bottom: 2rem; }
+h1 { font-family: 'Anybody', sans-serif; font-size: clamp(2.8rem, 5vw, 5.5rem); font-weight: 900; font-style: italic; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 2rem; }
 .hero-sub { font-size: 1rem; color: var(--ink-light); max-width: 400px; line-height: 1.75; margin-bottom: 2.5rem; font-weight: 300; }
 .btn-primary { background: var(--orange); color: var(--ink); padding: 1rem 2.5rem; border-radius: 100px; text-decoration: none; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.03em; transition: all 0.2s; display: inline-block; }
 .btn-primary:hover { background: var(--orange-dark); transform: translateY(-2px); }
 .hero-stats { display: flex; gap: 2.5rem; margin-top: 4rem; padding-top: 2.5rem; border-top: 1px solid var(--rule); }
 .stat { }
 .stat-num { display: block; font-size: 2rem; font-weight: 900; font-style: italic; line-height: 1; margin-bottom: 0.25rem; }
-.stat-label { font-size: 0.7rem; color: var(--ink-light); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 400; line-height: 1.5; }
+.stat-label { font-size: 0.7rem; color: var(--ink-light); text-transform: none; letter-spacing: 0; font-weight: 400; line-height: 1.5; }
 section { border-bottom: 1px solid var(--rule); }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 3rem; }
 .section-inner { padding: 8rem 0; }
-.eyebrow { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 2rem; display: block; }
-h2 { font-family: 'Anybody', sans-serif; font-size: clamp(2.5rem, 5vw, 5rem); font-weight: 900; font-style: italic; line-height: 0.95; letter-spacing: -0.02em; margin-bottom: 2rem; }
+.eyebrow { font-size: 0.7rem; font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--ink-light); margin-bottom: 2rem; display: block; }
+h2 { font-family: 'Anybody', sans-serif; font-size: clamp(2.5rem, 5vw, 5rem); font-weight: 900; font-style: italic; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 2rem; }
 .pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 2px; overflow: hidden; margin-top: 5rem; }
 .pain-card { background: var(--cream); padding: 3rem 2.5rem; }
 .pain-num { font-size: 0.7rem; color: var(--ink-light); letter-spacing: 0.15em; font-weight: 400; margin-bottom: 2rem; display: block; }
@@ -60,7 +60,7 @@ h2 { font-family: 'Anybody', sans-serif; font-size: clamp(2.5rem, 5vw, 5rem); fo
 .step-content h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
 .step-content p { font-size: 0.875rem; color: var(--ink-light); line-height: 1.75; font-weight: 300; }
 .how-visual { background: var(--ink); border-radius: 4px; aspect-ratio: 3/4; display: flex; align-items: center; justify-content: center; }
-.how-visual .placeholder-label { font-size: 0.7rem; color: rgba(255,255,255,0.2); letter-spacing: 0.15em; text-transform: uppercase; }
+.how-visual .placeholder-label { font-size: 0.7rem; color: rgba(255,255,255,0.2); letter-spacing: 0; text-transform: none; }
 .sms-section-inner { padding: 8rem 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8rem; align-items: center; }
 .phone { background: #1a1612; border-radius: 32px; padding: 2rem 1.5rem; max-width: 320px; border: 1px solid #2a2520; }
 .phone-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
@@ -84,7 +84,7 @@ h2 { font-family: 'Anybody', sans-serif; font-size: clamp(2.5rem, 5vw, 5rem); fo
 .pricing-inner h2 { margin-bottom: 1rem; }
 .pricing-inner .sub { font-size: 1rem; color: var(--ink-light); margin-bottom: 4rem; font-weight: 300; }
 .price-card { border: 1px solid var(--rule); border-radius: 4px; padding: 3.5rem; text-align: left; }
-.price-badge { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; background: var(--ink); color: var(--cream); padding: 0.3rem 0.8rem; border-radius: 100px; margin-bottom: 2rem; }
+.price-badge { display: inline-block; font-size: 0.65rem; font-weight: 400; letter-spacing: 0; text-transform: none; background: var(--ink); color: var(--cream); padding: 0.3rem 0.8rem; border-radius: 100px; margin-bottom: 2rem; }
 .price-amount { font-size: 5rem; font-weight: 900; font-style: italic; line-height: 1; margin-bottom: 0.25rem; }
 .price-amount sup { font-size: 2rem; vertical-align: top; margin-top: 1rem; }
 .price-note { font-size: 0.8rem; color: var(--ink-light); margin-bottom: 2.5rem; }
