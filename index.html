@@ -117,19 +117,21 @@
       <svg width="54" height="36" viewBox="0 0 680 420" style="overflow:visible;">
         <style>
           .nl { fill: #e8a030; }
-          .nr { fill: none; stroke: #e8a030; opacity: 0; transform-origin: 406px 300px; animation: np 2.6s ease-out infinite; }
+          .nr { fill: none; stroke: #e8a030; opacity: 0; animation: np 2.6s ease-out infinite; }
           .nr:nth-child(1) { stroke-width: 12; animation-delay: 0s; }
           .nr:nth-child(2) { stroke-width: 9; animation-delay: 0.65s; }
           .nr:nth-child(3) { stroke-width: 6.5; animation-delay: 1.3s; }
           .nr:nth-child(4) { stroke-width: 4; animation-delay: 1.95s; }
           @keyframes np { 0% { opacity: 1; transform: scale(0.05); } 50% { opacity: 0.5; } 100% { opacity: 0; transform: scale(1); } }
         </style>
-        <g class="nr"><ellipse cx="406" cy="300" rx="55" ry="14"/></g>
-        <g class="nr"><ellipse cx="406" cy="300" rx="85" ry="22"/></g>
-        <g class="nr"><ellipse cx="406" cy="300" rx="115" ry="30"/></g>
-        <g class="nr"><ellipse cx="406" cy="300" rx="145" ry="38"/></g>
         <g transform="translate(340,300) scale(1,0.65) translate(-340,-300)">
           <text x="340" y="300" font-family="'Arial Black','Helvetica Neue',sans-serif" font-size="260" font-weight="900" font-style="italic" text-anchor="middle" class="nl">R</text>
+        </g>
+        <g transform="translate(450,300)">
+          <ellipse class="nr" cx="0" cy="0" rx="55" ry="14"/>
+          <ellipse class="nr" cx="0" cy="0" rx="85" ry="22"/>
+          <ellipse class="nr" cx="0" cy="0" rx="115" ry="30"/>
+          <ellipse class="nr" cx="0" cy="0" rx="145" ry="38"/>
         </g>
       </svg>
       <span style="font-family:'Anybody',sans-serif;font-size:1.3rem;font-weight:600;font-style:italic;letter-spacing:0.15em;color:#f0ece0;margin-left:0.4rem;">RIPPLE</span>
